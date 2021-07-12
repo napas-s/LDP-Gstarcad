@@ -38,7 +38,7 @@ if (!function_exists('base_url')) {
 
 	<!-- Stylesheets ============================================= -->
 	<link rel="stylesheet" href="<?PHP echo base_url(); ?>fonts/Sukhumvit/stylesheet.css" type="text/css" />
-	<link rel="stylesheet" href="<?PHP echo base_url(); ?>custom/index.css?v=10" type="text/css" />
+	<link rel="stylesheet" href="<?PHP echo base_url(); ?>custom/index.css?v=11" type="text/css" />
 	<link rel="stylesheet" href="<?PHP echo base_url(); ?>css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="<?PHP echo base_url(); ?>style.css" type="text/css" />
 	<link rel="stylesheet" href="<?PHP echo base_url(); ?>css/dark.css" type="text/css" />
@@ -193,19 +193,27 @@ if (!function_exists('base_url')) {
 			</div>
 		</header>
 
-		<section id="slider" class="dark" style="background: url(images/bg/mask-group-2.webp) center center / cover no-repeat; overflow: visible;" data-height-lg="600" data-height-md="500" data-height-sm="400" data-height-xs="700" data-height-xxs="600">
+		<section id="slider" class="dark" style="background: url(images/bg/Mask-Group-4.png) center center / cover no-repeat; overflow: visible;" data-height-lg="1100" data-height-md="1000" data-height-sm="900" data-height-xs="1150" data-height-xxs="900">
 			<div id="section-promotion" class="slider-parallax-inner">
 				<div class="vertical-middle clearfix slider-content-pd">
 					<div class="container-custom">
-						<div class="grid-slider-two">
-							<div class="display-flex">
+						<div style="max-width: 800px; margin:auto;">
+							<div class="grid-slider-two" >
+								<div class="display-flex">
+									<div>
+										<a href="#" data-scrollto="#content-detail-dowload" data-offset="100" >
+											<img  src="<?PHP echo base_url(); ?>images/items/Group-8011.png" alt="Logo">
+										</a>
+									</div>
+								</div>
 								<div>
-									<img class="slider-img-1" src="<?PHP echo base_url(); ?>images/items/slider-items.png" alt="Logo">
-									<a href="#" data-scrollto="#content-detail-dowload" data-offset="100" ><img class="slider-img-1" src="<?PHP echo base_url(); ?>images/items/slider-items-btn.png" alt="Logo"></a>
+									<img src="<?PHP echo base_url(); ?>images/items/get1free1.png" alt="image-2">
 								</div>
 							</div>
-							<div>
-								<img class="slider-img-2" src="<?PHP echo base_url(); ?>images/items/gstar-cad-2021-box-01@3x.png" alt="Logo">
+						</div>
+						<div style="max-width: 700px; margin:auto;">
+							<div class="center">
+								<img src="<?PHP echo base_url(); ?>images/items/Group-801.png" alt="image-3">
 							</div>
 						</div>
 					</div>
@@ -266,105 +274,10 @@ if (!function_exists('base_url')) {
 									GstarCAD คือ โปรแกรมเขียนแบบ 2D/3D เป็นซอฟแวร์ CAD ที่มีประสิทธิภาพ ทำงานได้รวดเร็วและมีฟังก์ชั่นครบครัน รองรับทุกสายงาน ไม่ว่าจะเป็นเขียนแบบบ้าน ชิ้นส่วนอุปกรณ์ แผนผัง รวมถึงเขียนแบบไฟฟ้าในราคาที่คุ้มค่า พร้อมทั้งฟังก์ชั่นการทำงานอีกมากมาย ที่ช่วยการทำงานของคุณเต็มประสิทธิภาพยิ่งขึ้น
 								</div>
 							</div>
-							<div class="grid-quotation-two" style="margin-top: 60px;">
+							<div style="margin-top: 60px;">
 								<div class="display-flex-column">
-									<div class="quotation-hd-mobile center">
-										<h3 class="center co-bule">ซื้อ GstarCAD กับเรา<br/>พร้อมของแถมสุดพิเศษ</h3>
-										<img style="width: 100%; max-width:300px" src="<?PHP echo base_url(); ?>images/items/quotation-free.png" alt="transfer" >
-
-									</div>
-								</div>
-								<div>
-									<div class="bg-quotation">
-										<h3 class="center co-white">รับข้อเสนอสุดพิเศษ</h3>
-										<form method="post" action="register/do.php" style="margin-bottom: 0px;">
-											<div class="row">
-												<div class="col-md-6 col-sm-6">
-													<div class="form-group">
-														<small class="co-white">ชื่อผู้ติดต่อ *</small>
-														<input type="text" class="form-control" placeholder="ชื่อผู้ติดต่อ" id="firstname" name="firstname" required>
-													</div>
-												</div>
-												<div class="col-md-6 col-sm-6">
-													<div class="form-group">
-														<small class="co-white">ตำแหน่ง *</small>
-														<input type="text" class="form-control" placeholder="ตำแหน่ง" id="designation" name="designation" required>
-													</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-														<small class="co-white">ชื่อบริษัท (ถ้ามี)</small>
-														<input type="text" class="form-control" placeholder="ชื่อบริษัท (ถ้ามีกรอกเป็นภาษาอังกฤษเท่านั้น!)" id="company" name="company">
-													</div>
-												</div>
-												<div class="col-md-6 col-sm-6">
-													<div class="form-group">
-														<small class="co-white">เบอร์มือถือ *</small>
-														<input type="tel" class="form-control" placeholder="เบอร์มือถือ *" id="phone" name="mobile" required>
-													</div>
-												</div>
-												<div class="col-md-6 col-sm-6">
-													<div class="form-group">
-														<small class="co-white">อีเมล์ *</small>
-														<input type="text" class="form-control" placeholder="อีเมล์ (สำหรับส่งใบเสนอราคา) *" id="email" name="email" required>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group" style="text-align: left;">
-														<div class="co-fcc841" style="margin-bottom: 20px; margin-top:10px">บอกเราหน่อย! เพื่อให้เราเสนอราคาที่ดีที่สุดให้</div>
-														<div class="grid-quotation-radio">
-															<div>
-																<input id="check_01" class="checkbox-style" name="check_01" type="checkbox" value="มีใช้งานอยู่แล้ว แต่อยากหาตัวที่คุ้มค่า">
-																<label for="check_01" class="checkbox-style-3-label co-white" style="font-weight: unset;    text-transform: unset;
-    letter-spacing: 0;">มีใช้งานอยู่แล้ว แต่อยากหาตัวที่คุ้มค่า</label>
-															</div>
-															<div>
-																<input id="check_02" class="checkbox-style" name="check_02" type="checkbox" value="ซื้อใหม่ มองหาโปรแกรมเขียน CAD">
-																<label for="check_02" class="checkbox-style-3-label co-white" style="font-weight: unset;    text-transform: unset;
-    letter-spacing: 0;">ซื้อใหม่ มองหาโปรแกรมเขียน CAD</label>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group">
-														<small class="co-white">ข้อความถึงเรา (ถ้ามี)</small>
-														<textarea class="form-control" placeholder="สนใจแบบซื้อขาด ใช้งาน 2 เครื่อง" icols="40" rows="2" id="comment" name="description[message]"></textarea>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group title-center">
-														<input  type="hidden" name="url_path" value="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
-														<input type="hidden" name="redirect" value="<?php echo 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>"/>
-														<input type="hidden" name="industry" value="-" />
-														<input type="hidden" name="province" value="-" />
-														<input type="hidden" name="campaignid" value="1067707" />
-														<input type="hidden" name="mailtoteam" value="LDP_GstarCAD_on_8baht" />
-														<input type="hidden" name="regis_type" value="quotation" />
-														<input  type="hidden" name="urlreference" value="<?PHP if(!empty($_GET["ref"])) { ?> <?php echo $_GET["ref"]; ?> <?PHP } ?>" >
-														<button type="submit" class="bth btn-lg btn-submit" id="submit" name="submit" >
-															<img src="<?PHP echo base_url(); ?>images/items/cursor-hand-click-line.png" style="margin-right: 10px; width:20px"/>
-															คลิก! ให้เราส่งรายละเอียด
-														</button>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group">
-														<div>
-															<input type="hidden" name="description[pdpa-consent-8baht]" id="select-all"  value="checked" checked>
-															<div class="co-white center">
-																<small>เมื่อท่านส่งข้อมูลผ่านฟอร์ม จะถือว่าท่านยอมรับใน <a href="https://8baht.com/privacy-policy/" class="co-fcc841">นโยบายความเป็นส่วนตัว</a> ของเรา</small>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-								<div class="display-flex-column">
-									<div class="quotation-hd-desktop center">
-										<h3 class="center co-bule">ซื้อ GstarCAD กับเรา<br/>พร้อมของแถมสุดพิเศษ</h3>
+									<div class="center">
+										<h3 class="center co-bule">ซื้อ GstarCAD กับเราพร้อมของแถมสุดพิเศษ</h3>
 										<img style="width: 100%; max-width:300px" src="<?PHP echo base_url(); ?>images/items/quotation-free.png" alt="transfer" >
 									</div>
 								</div>
@@ -416,75 +329,15 @@ if (!function_exists('base_url')) {
 						</div>
 					</div>
 				</div>
-				<div id="content-detail-architecture">
-					<div class="clearfix">
-						<div class="content-padding">
-							<h2 class="center co-bule">GstarCAD Architecture<br/>สถาปัตยกรรม เขียนแบบก่อสร้าง</h2>
-							<div class="grid-architecture">
-								<div class="center co-bule">
-									<div class="center bvideo-play-1">
-										<div class="video-play-1" >
-											<video class="video-flex-1" controls>
-												<source src="<?PHP echo base_url(); ?>mp4/GstarCAD_Architecture2021_.mp4" type="video/mp4">
-											</video>
-										</div>
-										<img style="width:100%" src="<?PHP echo base_url(); ?>images/items/notebook-mockup@3x.png" alt="content" />
-									</div>
-								</div>
-								<div class="display-flex-column">
-									<div style="padding-top: 30px; width:100%" class="co-bule" >
-										GstarCAD สำหรับงานด้านสถาปัตยกรรม มีฟังก์ชันระดับมืออาชีพและนวัตกรรมสำหรับการเขียนแบบก่อสร้าง เช่น การเชื่อมต่อบนผนัง หน้าต่างเบย์การจัดการสถิติวัตถุมิติข้อมูลและพิกัด
-										<div class="row" style="margin-top: 20px;">
-											<div class="col-6 col-xs-6 center">
-												<img style="width:100%; max-width:120px" src="<?PHP echo base_url(); ?>images/items/Architecture-Objects.png" alt="content" />
-											</div>
-											<div class="col-6 col-xs-6 center">
-												<img style="width:100%; max-width:120px" src="<?PHP echo base_url(); ?>images/items/Innovative-Function.png" alt="content" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="content-detail-mechanical">
-					<div class="clearfix">
-						<div class="content-padding">
-							<h2 class="center co-bule" style="margin-bottom: 0px;">GstarCAD Mechanical</h2>
-							<h3 class="center co-bule">เครื่องกล แปลนไฟฟ้า Electrical Drawing</h3>
-							<div class="co-bule">
-								ครอบคลุมทุกสาขาของการออกแบบไม่ว่าจะเขียนเครื่องกล หรือ แปลนไฟฟฟ้า GstarCAD  รองรับการออกแบบและวาดภาพระดับมืออาชีพที่สร้างขึ้นเป็นพิเศษ ไม่ว่าคุณจะเผชิญกับงานออกแบบประเภทใด  GstarCAD จะช่วยเติมเต็มไอเดียของคุณให้สมบูรณ์แบบ
-							</div>
-							<div style="margin-top:40px" class="center bvideo-play-2">
-								<div class="video-play-2" >
-									<video class="video-flex-2" controls>
-										<source src="<?PHP echo base_url(); ?>mp4/GstarCAD_Mechanical_overview.mp4" type="video/mp4">
-									</video>
-								</div>
-								<img style="width:100%" src="<?PHP echo base_url(); ?>images/items/mechanical-icon-3@3x.png" alt="content" />
-							</div>
-						</div>
-					</div>
-				</div>
 				<div id="content-detail-promotion">
 					<div class="clearfix">
 						<div class="content-padding">
 							<div class="center" >
-								<img style="width:100%; max-width: 600px;" src="<?PHP echo base_url(); ?>images/items/item-promo-head.png" alt="content" />
+								<img style="width:100%; max-width: 600px;" src="<?PHP echo base_url(); ?>images/items/item-promo-head-spacial.png" alt="content" />
 							</div>
-							<div class="content-pronotion-desk center">
-								<a href="#" data-scrollto="#content-quotation" data-offset="100" >
-									<img style="width:100%;max-width: 800px;" src="<?PHP echo base_url(); ?>images/items/Plan-03.png" alt="content" />
-								</a>
-							</div>
-							<div class="content-pronotion-mobile center" style="margin-bottom:10px">
-								<a href="#" data-scrollto="#content-quotation" data-offset="100" >
-									<img style="width:100%;max-width: 500px;" src="<?PHP echo base_url(); ?>images/items/Plan mobile 01.png" alt="content" />
-								</a>
-								<div style="margin-top:20px" ></div>
-								<a href="#" data-scrollto="#content-quotation" data-offset="100" >
-									<img style="width:100%;max-width: 500px;" src="<?PHP echo base_url(); ?>images/items/Plan mobile 02.png" alt="content" />
+							<div class="center">
+								<a  href="https://lin.ee/S9eyleh" target="_bank" >
+									<img style="width:100%;max-width: 400px;" src="<?PHP echo base_url(); ?>images/items/Plan-spacial.jpg" alt="plan" />
 								</a>
 							</div>
 							<div class="center"><small>ราคานี้ยังไม่รวมภาษีมูลค่าเพิ่ม 7%  หากคุณมีข้อสงสัยใดๆ กรุณาติดต่อเรา</small></div>
@@ -496,7 +349,6 @@ if (!function_exists('base_url')) {
 										<div class="grid-icon-condition">
 											<div><span class="icon-condition"></span><small>ได้รับ SN จริง เมื่อชำระเงินครบถ้วน (ช่วงนี้ได้เป็น Temp SN)</small></div>
 											<div><span class="icon-condition"></span><small>สั่งจ่ายเป็น PDC 60 วันนับจากวันที่ส่ง PO</small></div>
-											<div><span class="icon-condition"></span><small>หมดเขต 30 มิถุนายน 2021</small></div>
 											<div><span class="icon-condition"></span><small>เงื่อนไขเป็นไปตามที่บริษัทกำหนดฯ</small></div>
 										</div>
 									</div>
@@ -579,6 +431,58 @@ if (!function_exists('base_url')) {
 										</div>
 										<br/>
 										<button onclick="clickHide()" class="co-bule button-hd-psi"> <i class="icon-angle-up"></i> ปิด</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="content-oc" >
+					<div class="container-custom ">
+						<h2 class="center">ตัวอย่างบริษัทต่างๆ ที่ได้นำ GstarCAD ไปใช้งาน ↓</h2>
+						<div style="max-width: 800px; margin:auto;" id="oc-portfolio-sidebar" class="owl-carousel carousel-widget" data-items="1" data-margin="10" data-loop="true" data-nav="false" data-autoplay="5000">
+							<div class="oc-item">
+								<div class="iportfolio">
+									<div class="portfolio-desc center nobottompadding">
+										« ทีมเราใช้ GstarCAD อยู่ในช่วงของการเตรียมแบบสำหรับการก่อสร้างพื้นโพสเทนชั่น เราต้องมีแบบรายละเอียด ประกอบก่อนว่าพื้นมีความหนาเท่าไหร่ วัสดุที่ใช้มีอะไร จำนวนเท่าไร จะต้องอยู่ตำแหน่งตรงไหนของแบบรายละเอียด GstarCAD จะเข้ามาช่วยในเรื่องของการสร้างรายละเอียดของแบบเหล่านี้ และส่งข้อมูลต่อไปยังโรงงานและอีกส่วนหนึ่งจะถูกส่งไปที่หน้างานเพื่อใช้ในการประกอบติดตั้ง »
+										<br/><br/>
+										<span>บริษัทผลิตภัณฑ์และวัตถุก่อสร้าง จำกัด (CPAC) ในเครือซิเมนต์ไทย</span>
+									</div>
+								</div>
+							</div>
+							<div class="oc-item">
+								<div class="iportfolio">
+									<div class="portfolio-desc center nobottompadding">
+										« เหตุที่ใช้ GstarCAD เพราะเป็นซอฟท์แวร์ลิขสิทธิ์ราคาประหยัด จึงทำให้ต้นทุนเราไม่สูง และผู้ใช้งานเราก็บอกเลยว่าใช้งานง่าย หากแค่พอมีพื้นฐานอยู่ก็สามารถใช้งานได้เลย ไม่ยุ่งยากอะไร สามารถเอาไปประยุกต์ใช้กับงานแต่ละส่วนที่เค้าใช้งานได้ เรียกได้ว่าคุณภาพคับแก้วราคาโดนใจครับ »
+										<br/><br/>
+										<span>คุณภูษิต เดชะกุล ผู้จัดการโรงงาน บริษัท Summa N.K. Contracting</span>
+									</div>
+								</div>
+							</div>
+							<div class="oc-item">
+								<div class="iportfolio">
+									<div class="portfolio-desc center nobottompadding">
+										« จากเท่าที่สัมผัสมาก็พึงพอใจมาก คือทั้ง 2D และ 3D GstarCAD รองรับได้หมดเลย ถ้าเป็น CAD ตัวอื่น ไฟล์ที่เป็น 3D ก็ต้องซื้อ 3D มาใช้ แต่ GstarCAD ไม่ต้อง แล้วฟังก์ชั่นในการทำงานต่างๆ สามารถรองรับไฟล์ CAD อื่นได้ »
+										<br/><br/>
+										<span>คุณกิติชัย วิจิตรสุขุม หัวหน้าฝ่ายงานออกแบบ บริษัท SECOM</span>
+									</div>
+								</div>
+							</div>
+							<div class="oc-item">
+								<div class="iportfolio">
+									<div class="portfolio-desc center nobottompadding">
+										« “We are Professional in Construction” เราเน้นย้ำการใช้ซอฟต์แวร์ลิขสิทธิ์ทั้งหมด 100 % ข้อดีมันต้องมีอยู่แล้ว คือเราจะทำงานด้วยความสบายใจขึ้นเยอะ ไม่ต้องมาพะวง ระแวดระวังเรื่องจะมีคนเข้ามาตรวจจับอะไรแบบนี้ ตัดปัญหาตรงนี้ไปเลย »
+										<br/><br/>
+										<span>คุณฐานะ IT Manager บริษัท สยาม มัลติ คอน จำกัด</span>
+									</div>
+								</div>
+							</div>
+							<div class="oc-item">
+								<div class="iportfolio">
+									<div class="portfolio-desc center nobottompadding">
+										« กระบวนการเลือกง่ายๆ เราเลือกซอฟต์แวร์ CAD ที่ให้ทดลองใช้ในท้องตลาด นำแต่ละตัวมาติดตั้ง เพื่อทดสอบดูว่า CAD ตัวไหนสามารถรองรับการทำงานของเราได้ดีที่สุด ซึ่ง GstarCAD เป็นตัวเดียวที่สามารถทำตามคำสั่งของเราได้ครบทุกคำสั่ง โดยที่ไม่มี Error ครับ »
+										<br/><br/>
+										<span>บริษัท ซี-โพส จำกัด โดยทีมงานวิศวกร</span>
 									</div>
 								</div>
 							</div>
