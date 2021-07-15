@@ -337,7 +337,7 @@ if (!function_exists('base_url')) {
 							</div>
 							<div class="center">
 								<a  href="https://lin.ee/S9eyleh" target="_bank" >
-									<img style="width:100%;max-width: 400px;" src="<?PHP echo base_url(); ?>images/items/Plan-spacial.jpg" alt="plan" />
+									<img style="width:100%;max-width: 400px;" src="<?PHP echo base_url(); ?>images/items/Plan-spacial.png" alt="plan" />
 								</a>
 							</div>
 							<div class="center"><small>ราคานี้ยังไม่รวมภาษีมูลค่าเพิ่ม 7%  หากคุณมีข้อสงสัยใดๆ กรุณาติดต่อเรา</small></div>
