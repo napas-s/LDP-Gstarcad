@@ -634,33 +634,6 @@ if (!function_exists('base_url')) {
 
 		}
 	</script>
-	<script>
-		/********  English Company  ********/
-    	$('#company').attr("autocomplete","off");
-		var str_current_value = $('#company').val();
-			
-		$('#company').keyup(function(event){
-
-			var orgi_text="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890;:<>?._-, ~#&()@!'*+}{][$%^/|=\"";
-    		var str = $('#company').val();
-    		var str_length=str.length;
-    		var str_length_end=str_length-1;
-    		var isEng=true;
-    		var Char_At="";
-			for(i=0;i<str_length;i++){
-				Char_At=str.charAt(i);
-				if(orgi_text.indexOf(Char_At)==-1){
-					isEng=false;
-				}
-			}
-			if(str_length>=1){
-				if(isEng==false){
-					$('#company').val(str_current_value);
-				}
-			}
-	
-		});
-	</script>
 
 </body>
 </html>

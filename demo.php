@@ -206,26 +206,29 @@ if (!function_exists('base_url')) {
 					<div class="container clearfix">
 						<div id="section-dowloads"  class="col_full title-center mg-top-50 mg-bottom-50">
 							<h2>กรอกฟอร์มเพื่อดาวน์โหลด โปรแกรม GstarCAD</h2>
-							<form method="post" action="/register/do.php">
+							<form id="request-quotation" name="request-quotation" method="post" action="register/do.php" style="margin-bottom: 0px;" onsubmit="return validateForm(event)">
 								<div class="row"  style="margin:auto;max-width:620px">
-									<div class="col-md-6">
+									<div class="col-md-6" style="text-align: left !important;">
 										<div class="form-group">
-										<input type="text" class="form-control" placeholder="ชื่อ" id="firstname" name="firstname" required>
+										<input type="text" class="form-control" placeholder="ชื่อ" id="firstname" name="firstname" >
+										<small id="er-firstname" style="color:red"  ></small>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-md-6" style="text-align: left !important;">
 										<div class="form-group">
-										<input type="text" class="form-control" placeholder="สกุล" id="lastname" name="lastname" required>
+										<input type="text" class="form-control" placeholder="สกุล" id="lastname" name="lastname" >
+										<small id="er-lastname" style="color:red" ></small>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12" style="text-align: left !important;">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="อีเมล์ (สำหรับส่งลิงค์ดาวน์โหลด) *" id="email" name="email" required>
+											<input type="text" class="form-control" placeholder="อีเมล์ (สำหรับส่งลิงค์ดาวน์โหลด) *" id="email" name="email" >
+											<small id="er-email" style="color:red" ></small>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12" style="text-align: left !important;">
 										<div class="form-group">
-											<select class="form-control" id="designation" name="designation" required>
+											<select class="form-control" id="designation" name="designation">
 												<option value="">กรุณาเลือกอาชีพ</option>
 												<option value="วิศวกร">วิศวกร</option>
 												<option value="สถาปนิก">สถาปนิก</option>
@@ -234,11 +237,13 @@ if (!function_exists('base_url')) {
 												<option value="โฟร์แมนควบคุมงานก่อสร้าง">โฟร์แมนควบคุมงานก่อสร้าง</option>
 												<option value="อื่นๆ">อื่นๆ</option>
 											</select>
+											<small id="er-designation" style="color:red" ></small>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12" style="text-align: left !important;">
 										<div class="form-group">
-											<input type="tel" class="form-control" placeholder="เบอร์มือถือ *" id="phone" name="mobile" required>
+											<input type="tel" class="form-control" placeholder="เบอร์มือถือ *" id="phone" name="mobile" >
+											<small id="er-phone" style="color:red" ></small>
 										</div>
 									</div>
 									<div class="col-md-12">
@@ -319,8 +324,87 @@ if (!function_exists('base_url')) {
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js"></script>
 
+	<script>
+		function validateForm()
+		{
+			if(document.all.firstname.value=='')
+			{
+				$('#er-firstname').html('* กรุณากรอกข้อมูล');
+				document.all.firstname.focus();
+				return false;
+			}
+			if(document.all.lastname.value=='')
+			{
+				$('#er-lastname').html('* กรุณากรอกข้อมูล');
+				document.all.lastname.focus();
+				return false;
+			}
+			if(document.all.email.value=='')
+			{
+				$('#er-email').html('* กรุณากรอกข้อมูล');
+				document.all.email.focus();
+				return false;
+			}
+			if(document.all.designation.value=='')
+			{
+				$('#er-designation').html('* กรุณาเลือกข้อมูล');
+				document.all.designation.focus();
+				return false;
+			}
+			if(document.all.phone.value=='')
+			{
+				$('#er-phone').html('* กรุณากรอกข้อมูล');
+				document.all.phone.focus();
+				return false;
+			}
+
+			document.getElementById("submit").disabled = true;
+			return true;
+		}
+
+		/********  input disble button  ********/
+
+		$('#submit').click( function(){
+			document.getElementById("request-quotation").submit();
+			document.getElementById("submit").disabled = true;
+		})
+		$('#firstname').keypress(
+			function(){
+				$('#er-firstname').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#designation').change(
+			function(){
+				$('#er-designation').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#company').keypress(
+			function(){
+				$('#er-company').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#phone').keypress(
+			function(){
+				$('#er-phone').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#email').keypress(
+			function(){
+				$('#er-email').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#select-all').click( function(){
+			document.getElementById("submit").disabled = false;
+		})
+
+	</script>
 	<!-- Start of LiveChat (www.livechatinc.com) code -->
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	window.__lc = window.__lc || {};
 	window.__lc.license = 10843677;
 	(function() {
@@ -332,7 +416,7 @@ if (!function_exists('base_url')) {
 	<noscript>
 	<a href="https://www.livechatinc.com/chat-with/10843677/" rel="nofollow">Chat with us</a>,
 	powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
-	</noscript>
+	</noscript> -->
 	<!-- End of LiveChat code -->
 
 </body>

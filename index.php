@@ -138,7 +138,7 @@ if (!function_exists('base_url')) {
 <body class="stretched">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9T492V"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<!-- Document Wrapper ============================================= -->
 	<div id="wrapper" class="clearfix">
@@ -277,18 +277,20 @@ if (!function_exists('base_url')) {
 								<div>
 									<div class="bg-quotation">
 										<h3 class="center co-white">รับข้อเสนอสุดพิเศษ</h3>
-										<form method="post" action="register/do.php" style="margin-bottom: 0px;">
+										<form id="request-quotation" name="request-quotation" method="post" action="register/do.php" style="margin-bottom: 0px;" onsubmit="return validateForm(event)">
 											<div class="row">
 												<div class="col-md-6 col-sm-6">
 													<div class="form-group">
 														<small class="co-white">ชื่อผู้ติดต่อ *</small>
-														<input type="text" class="form-control" placeholder="ชื่อผู้ติดต่อ" id="firstname" name="firstname" required>
+														<input type="text" class="form-control" placeholder="ชื่อผู้ติดต่อ" id="firstname" name="firstname" >
+														<small id="er-firstname" style="color: FFF;"></small>
 													</div>
 												</div>
 												<div class="col-md-6 col-sm-6">
 													<div class="form-group">
 														<small class="co-white">ตำแหน่ง *</small>
-														<input type="text" class="form-control" placeholder="ตำแหน่ง" id="designation" name="designation" required>
+														<input type="text" class="form-control" placeholder="ตำแหน่ง" id="designation" name="designation" >
+														<small id="er-designation" style="color: FFF;"></small>
 													</div>
 												</div>
 												<div class="col-md-12 col-sm-12">
@@ -300,13 +302,15 @@ if (!function_exists('base_url')) {
 												<div class="col-md-6 col-sm-6">
 													<div class="form-group">
 														<small class="co-white">เบอร์มือถือ *</small>
-														<input type="tel" class="form-control" placeholder="เบอร์มือถือ *" id="phone" name="mobile" required>
+														<input type="tel" class="form-control" placeholder="เบอร์มือถือ *" id="phone" name="mobile" >
+														<small id="er-phone" style="color: FFF;"></small>
 													</div>
 												</div>
 												<div class="col-md-6 col-sm-6">
 													<div class="form-group">
 														<small class="co-white">อีเมล์ *</small>
-														<input type="text" class="form-control" placeholder="อีเมล์ (สำหรับส่งใบเสนอราคา) *" id="email" name="email" required>
+														<input type="text" class="form-control" placeholder="อีเมล์ (สำหรับส่งใบเสนอราคา) *" id="email" name="email" >
+														<small id="er-email" style="color: FFF;"></small>
 													</div>
 												</div>
 												<div class="col-md-12">
@@ -314,13 +318,13 @@ if (!function_exists('base_url')) {
 														<div class="co-fcc841" style="margin-bottom: 20px; margin-top:10px">บอกเราหน่อย! เพื่อให้เราเสนอราคาที่ดีที่สุดให้</div>
 														<div class="grid-quotation-radio">
 															<div>
-																<input id="check_01" class="checkbox-style" name="check_01" type="checkbox" value="มีใช้งานอยู่แล้ว แต่อยากหาตัวที่คุ้มค่า">
-																<label for="check_01" class="checkbox-style-3-label co-white" style="font-weight: unset;    text-transform: unset;
+																<input id="check_01"  class="form-check-input" name="check_01" type="checkbox" value="มีใช้งานอยู่แล้ว แต่อยากหาตัวที่คุ้มค่า">
+																<label for="check_01" class="form-check-label co-white" style="font-weight: unset;    text-transform: unset;
     letter-spacing: 0;">มีใช้งานอยู่แล้ว แต่อยากหาตัวที่คุ้มค่า</label>
 															</div>
 															<div>
-																<input id="check_02" class="checkbox-style" name="check_02" type="checkbox" value="ซื้อใหม่ มองหาโปรแกรมเขียน CAD">
-																<label for="check_02" class="checkbox-style-3-label co-white" style="font-weight: unset;    text-transform: unset;
+																<input id="check_02" class="form-check-input" name="check_02" type="checkbox" value="ซื้อใหม่ มองหาโปรแกรมเขียน CAD">
+																<label for="check_02" class="form-check-label co-white" style="font-weight: unset;    text-transform: unset;
     letter-spacing: 0;">ซื้อใหม่ มองหาโปรแกรมเขียน CAD</label>
 															</div>
 														</div>
@@ -731,6 +735,87 @@ if (!function_exists('base_url')) {
 		}
 	</script>
 	<script>
+
+function validateForm()
+		{
+			if(document.all.firstname.value=='')
+			{
+				$('#er-firstname').html('กรุณากรุณากรอกข้อมูล');
+				document.all.firstname.focus();
+				return false;
+			}
+			if(document.all.designation.value=='')
+			{
+				$('#er-designation').html('กรุณากรอกข้อมูล');
+				document.all.designation.focus();
+				return false;
+			}
+			if(document.all.phone.value=='')
+			{
+				$('#er-phone').html('กรุณากรอกข้อมูล');
+				document.all.phone.focus();
+				return false;
+			}
+			if(document.all.email.value=='')
+			{
+				$('#er-email').html('กรุณากรอกข้อมูล');
+				document.all.email.focus();
+				return false;
+			}
+
+			document.getElementById("submit").disabled = true;
+			return true;
+		}
+
+		/********  input disble button  ********/
+
+		$('#submit').click( function(){
+			document.getElementById("request-quotation").submit();
+			document.getElementById("submit").disabled = true;
+		})
+		$('#firstname').keypress(
+			function(){
+				$('#er-firstname').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#designation').keypress(
+			function(){
+				$('#er-designation').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#company').keypress(
+			function(){
+				$('#er-company').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#phone').keypress(
+			function(){
+				$('#er-phone').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#email').keypress(
+			function(){
+				$('#er-email').html('');
+				document.getElementById("submit").disabled = false;
+			}
+		);
+		$('#comment').keypress( function(){
+			document.getElementById("submit").disabled = false;
+		})
+		$('#check_01').click( function(){
+			document.getElementById("submit").disabled = false;
+		})
+		$('#inlineCheckbox2').click( function(){
+			document.getElementById("submit").disabled = false;
+		})
+		$('#check_02').click( function(){
+			document.getElementById("submit").disabled = false;
+		})
+		
 		/********  English Company  ********/
     	$('#company').attr("autocomplete","off");
 		var str_current_value = $('#company').val();
