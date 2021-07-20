@@ -206,7 +206,7 @@ if (!function_exists('base_url')) {
 					<div class="container clearfix">
 						<div id="section-dowloads"  class="col_full title-center mg-top-50 mg-bottom-50">
 							<h2>กรอกฟอร์มเพื่อดาวน์โหลด โปรแกรม GstarCAD</h2>
-							<form id="request-quotation" name="request-quotation" method="post" action="register/do.php" style="margin-bottom: 0px;" onsubmit="return validateForm(event)">
+							<form id="request-quotation" name="request-quotation" method="post" action="/register/do.php" style="margin-bottom: 0px;" onsubmit="return validateForm(event)">
 								<div class="row"  style="margin:auto;max-width:620px">
 									<div class="col-md-6" style="text-align: left !important;">
 										<div class="form-group">
@@ -229,12 +229,12 @@ if (!function_exists('base_url')) {
 									<div class="col-md-12" style="text-align: left !important;">
 										<div class="form-group">
 											<select class="form-control" id="designation" name="designation">
-												<option value="">กรุณาเลือกอาชีพ</option>
-												<option value="วิศวกร">วิศวกร</option>
-												<option value="สถาปนิก">สถาปนิก</option>
-												<option value="ช่างเขียนแบบ">ช่างเขียนแบบ</option>
+												<option value="">บทบาทสายงานหลักของคุณ</option>
+												<option value="วิศวกร Engineering">วิศวกร Engineering</option>
+												<option value="สถาปนิก เขียนแบบ">สถาปนิก เขียนแบบ</option>
+												<option value="เจ้าหน้าที่ไอที IT">เจ้าหน้าที่ไอที IT</option>
 												<option value="วิจัยและพัฒนา">วิจัยและพัฒนา</option>
-												<option value="โฟร์แมนควบคุมงานก่อสร้าง">โฟร์แมนควบคุมงานก่อสร้าง</option>
+												<option value="ผู้รับเหมา โฟร์แมนควบคุมงานก่อสร้าง">ผู้รับเหมา โฟร์แมนควบคุมงานก่อสร้าง</option>
 												<option value="อื่นๆ">อื่นๆ</option>
 											</select>
 											<small id="er-designation" style="color:red" ></small>
